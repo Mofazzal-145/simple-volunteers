@@ -3,10 +3,12 @@ import Home from './components/Home/Home'
 import Volunteers from './components/Volunteers/Volunteers'
 import './App.css';
 import Main from './components/Main/Main';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <Routes>
         <Route path='/' element={<Main></Main>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>

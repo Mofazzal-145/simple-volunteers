@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useVolunteers from '../../Hooks/useVolunteers';
 import Activity from '../Activity/Activity';
 import './Main.css'
 
 const Main = () => {
     
-    const [volunteers, setVolunteers] = useState([]);
-
-    useEffect( () =>{
-        fetch('data.json')
-        .then(res => res.json())
-        .then(data => setVolunteers(data));
-    },[])
+    const [volunteers, setVolunteers] = useVolunteers([]);
+    
     return (
         <div>
             <h3>Volunteers Activities:{volunteers.length}</h3>
